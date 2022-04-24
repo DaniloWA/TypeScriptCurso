@@ -87,3 +87,20 @@ function showID(id) {
 showID(1);
 showID("200");
 showID(123);
+function showCoords(obj) {
+    console.log(`X ${obj.x} ${obj.y} ${obj.z}`);
+}
+const coordOBJ = {
+    x: 10,
+    y: 15,
+    z: 20
+};
+showCoords(coordOBJ);
+const somePerson = { name: "Danilo", age: 25 };
+console.log(somePerson.name);
+/*
+type personType = {
+    age: number
+}
+*/
+// 15 - literal types

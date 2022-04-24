@@ -132,3 +132,49 @@ function showID(id: ID) {
 showID(1)
 showID("200")
 showID(123)
+
+// 13 - interface
+interface Point{
+    x: number
+    y: number
+    z: number
+}
+
+function showCoords(obj: Point) {
+    console.log(`X ${obj.x} ${obj.y} ${obj.z}`)
+}
+
+const coordOBJ:Point = {
+    x: 10,
+    y: 15,
+    z: 20
+}
+
+showCoords(coordOBJ)
+
+// 14 - interface x type alias
+// unica diferença que o Interface da pra ser alterado no decorrer do codigo o alias não!
+
+interface Person {
+    name: string
+}
+
+interface Person {
+    age: number
+}
+
+const somePerson: Person = {name:"Danilo", age: 25}
+
+console.log(somePerson.name)
+
+type personType = {
+    name: string
+}
+
+/*
+type personType = {
+    age: number
+}
+*/
+
+// 15 - literal types
