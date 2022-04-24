@@ -114,5 +114,10 @@ showDirection("left");
 //showDirection("top") erro de tipagem
 // 16 - Non-null Assertiuon Operation  ? ! 
 const p = document.getElementById("some-p");
-console.log(p === null || p === void 0 ? void 0 : p.innerText);
-console.log(p.innerText);
+console.log(p?.innerText);
+// 17 - bigint
+let n;
+n = 1000n;
+console.log(n);
+console.log(n + 100n);
+console.log(typeof n);
