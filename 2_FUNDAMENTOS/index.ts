@@ -49,3 +49,12 @@ let inf = "Teste"
 
 //ann = 1
 //inf = 1
+
+
+console.log("ex_02")
+// ex_02 --
+
+const numero:number = 10
+const texto: string = `Eu vou dar console.log nesse numero : ${numero.toString()}`
+console.log(texto.toUpperCase())
+console.log(typeof texto)
