@@ -38,3 +38,14 @@ console.log(typeof a)
 a = true
 
 console.log(a)
+
+// 4 - inference e annotation
+
+// annotation
+let ann:string = "Teste"
+
+// inference
+let inf = "Teste"
+
+//ann = 1
+//inf = 1
