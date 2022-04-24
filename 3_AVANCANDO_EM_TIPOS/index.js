@@ -112,3 +112,7 @@ function showDirection(direction) {
 }
 showDirection("left");
 //showDirection("top") erro de tipagem
+// 16 - Non-null Assertiuon Operation  ? ! 
+const p = document.getElementById("some-p");
+console.log(p === null || p === void 0 ? void 0 : p.innerText);
+console.log(p.innerText);

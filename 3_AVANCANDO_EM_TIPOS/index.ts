@@ -190,3 +190,9 @@ function showDirection(direction: "left" | "right" | "center") {
 
 showDirection("left")
 //showDirection("top") erro de tipagem
+
+// 16 - Non-null Assertiuon Operation  ? ! 
+
+const p = document.getElementById("some-p")
+console.log(p?.innerText)
+console.log(p!.innerText)
