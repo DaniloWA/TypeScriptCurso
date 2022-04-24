@@ -12,3 +12,18 @@ const y: number =  16.42424
 console.log(y.toPrecision(3))
 
 console.log(typeof y)
+
+// 2 - string
+
+const firstName: string = "Danilo Duarte"
+
+console.log(firstName.toUpperCase())
+
+let fullName: string
+
+const lastName: string = "Oliveira"
+
+fullName = firstName + " " + lastName
+
+console.log(fullName)
+console.log(typeof fullName)
