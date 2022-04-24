@@ -55,3 +55,45 @@ setTimeout(() => {
 
     //console.log(sallary)
 })
+
+// 7 - Objetos
+
+function passCoordinates(coord: {x: number, y: number}) {
+    console.log("X cordinates: " + coord.x )
+    console.log("Y cordinates: " + coord.y )
+}
+
+const objCoord = {x: 329, y: 84.2}
+
+passCoordinates(objCoord)
+
+// passCoordinates({nome: 1, sobrenome: 2}) erro
+
+// menos comum
+const pessoaObj: {nome: string, surname: string} = {nome: "Danilo", surname: "Oliveira"}
+
+// 8 - props opcionais
+function showNumbers(a: number, b: number, c?: number) {
+    console.log("A: " + a)
+    console.log("B: " + b)
+    if(c){
+        console.log("C: " + c)
+    }
+}
+
+showNumbers(1,2,3)
+showNumbers(1,2)
+// showNumbers(1)
+
+// 9 - validando argumento opcional
+
+function advancedGreeting(firstName: string, lastName?: string) {
+    if(lastName !== undefined)
+        return`Olá, ${firstName} ${lastName}, tudo bem?`
+
+    return  `Olá, ${firstName}, tudo bem ?`
+}
+
+console.log(advancedGreeting("Danilo", "Oliveira"))
+console.log(advancedGreeting("Pedro"))
+
