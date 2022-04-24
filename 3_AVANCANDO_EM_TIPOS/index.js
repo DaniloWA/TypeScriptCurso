@@ -64,3 +64,20 @@ function advancedGreeting(firstName, lastName) {
 }
 console.log(advancedGreeting("Danilo", "Oliveira"));
 console.log(advancedGreeting("Pedro"));
+// 10 - union type
+function showBalance(balance) {
+    console.log("O saldo da conta é R$" + balance);
+}
+showBalance("500");
+showBalance(100);
+//showBalance(true) erro de tipo
+const arr2 = [1, "teste", true];
+// 11 - avancando em union types
+function showUserRole(role) {
+    if (typeof role === "boolean") {
+        return "Usuario não aprovado!";
+    }
+    return `A função do usuario é: ${role}`;
+}
+console.log(showUserRole(false));
+console.log(showUserRole("Admin"));

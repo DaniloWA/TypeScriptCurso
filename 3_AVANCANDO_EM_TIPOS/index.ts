@@ -97,3 +97,27 @@ function advancedGreeting(firstName: string, lastName?: string) {
 console.log(advancedGreeting("Danilo", "Oliveira"))
 console.log(advancedGreeting("Pedro"))
 
+// 10 - union type
+
+function showBalance(balance: string | number) {
+    console.log("O saldo da conta é R$" + balance)
+}
+
+showBalance("500")
+showBalance(100)
+//showBalance(true) erro de tipo
+
+const arr2: Array<number | string | boolean> = [1, "teste" , true]
+
+// 11 - avancando em union types
+function showUserRole(role: boolean | string) {
+    if(typeof role === "boolean"){
+        return "Usuario não aprovado!"
+    }
+
+    return `A função do usuario é: ${role}`
+
+}
+
+console.log(showUserRole(false)) 
+console.log(showUserRole("Admin")) 
