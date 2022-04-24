@@ -104,3 +104,11 @@ type personType = {
 }
 */
 // 15 - literal types
+let test;
+test = "testando";
+console.log(test);
+function showDirection(direction) {
+    console.log(`A direção é: ${direction}`);
+}
+showDirection("left");
+//showDirection("top") erro de tipagem
