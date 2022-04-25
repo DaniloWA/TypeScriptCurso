@@ -80,3 +80,33 @@ function showDogDetails(dog) {
 showDogDetails(turca);
 showDogDetails(bob);
 //showDogDetails(danilo) erro de tipagem espera um Dog
+function reviewUser(nota) {
+    switch (nota) {
+        case 1:
+            console.log(`${nota} horrivel`);
+            break;
+        case 2:
+            console.log(`${nota} ruim`);
+            break;
+        case 3:
+            console.log(`${nota} aceitavel`);
+            break;
+        case 4:
+            console.log(`${nota} bom`);
+            break;
+        case 5:
+            console.log(`${nota} Perfeito`);
+            break;
+        case false:
+            console.log(`Sem nota no momento!`);
+            break;
+        default:
+            console.log(`${nota} Mande uma nota valida!`);
+    }
+}
+reviewUser(1);
+reviewUser(2);
+reviewUser(3);
+reviewUser(4);
+reviewUser(5);
+reviewUser(false);
