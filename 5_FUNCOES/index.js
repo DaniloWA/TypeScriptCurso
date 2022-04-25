@@ -15,3 +15,18 @@ function preGreeting(f, userName) {
 }
 preGreeting(greeting, "Danilo");
 preGreeting(greeting, "Joao");
+// 2 - Generic functions
+function firstElement(arr) {
+    return arr[0];
+}
+console.log(firstElement([1, 2, true]));
+console.log(firstElement(["dada", 2, { 1: 2 }]));
+//console.log(firstElement("oi")) erro de tipagem
+function mergeObjects(obj1, obj2) {
+    return {
+        ...obj1,
+        ...obj2
+    };
+}
+const newObject = mergeObjects({ name: " Danilo" }, { age: 30, job: "Programmer" });
+console.log(newObject);
