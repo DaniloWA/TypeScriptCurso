@@ -49,3 +49,15 @@ const arnold = {
     caliber: 12
 };
 console.log(arnold);
+// 7  - readonly array
+let myArray = ["mala", "roupa", "comida"];
+// myArray[3] = "mansão"
+console.log(myArray);
+myArray.forEach((item) => {
+    console.log("Item: " + item);
+});
+myArray = myArray.map(item => {
+    return `Fruta: ${item}`;
+});
+console.log(myArray);
+// myArray[0] = "mansão" Apenas da para alterar atraves de metodos 
