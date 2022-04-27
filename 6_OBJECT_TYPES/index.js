@@ -32,4 +32,14 @@ let coords = {
 };
 coords.y = 15;
 console.log(coords);
-// coords.z = "teste" erro de tipagem 
+const danilo = {
+    name: "Danilo",
+    age: 25
+};
+const daniloDev = {
+    name: "Danilo",
+    age: 25,
+    superpowers: ["Inteligencia", "Astucia"]
+};
+console.log(danilo);
+console.log(daniloDev);

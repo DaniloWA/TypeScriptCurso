@@ -69,3 +69,27 @@ coords.y = 15
 console.log(coords)
 
 // coords.z = "teste" erro de tipagem 
+
+// 5  - Extending Types
+interface Human {
+    name: string,
+    age: number
+}
+
+interface Superhuman extends Human{
+    superpowers: string[]
+}
+
+const danilo: Human={
+    name: "Danilo",
+    age: 25
+}
+
+const daniloDev: Superhuman={
+    name: "Danilo",
+    age: 25,
+    superpowers: ["Inteligencia", "Astucia"]
+}
+
+console.log(danilo)
+console.log(daniloDev)
