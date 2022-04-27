@@ -132,3 +132,27 @@ myArray = myArray.map(item => {
 console.log(myArray)
 
 // myArray[0] = "mansão" Apenas da para alterar atraves de metodos 
+
+// 8 - Tuplas / onde vocÊ determina o item e o tipo de cada elemento dele
+
+type fiveNummbers = [number,number,number,number,number]
+
+// number[]
+
+const myNumberArray: fiveNummbers = [1,2,3,4,5]
+// const myNumberArray2: fiveNummbers = [1,2,3,4,5,6] erro de tipagem um elemento a mais do que o type
+// const miexedArray: fiveNummbers = [1,true,"teste",5] erro de tipagem
+
+console.log(myNumberArray)
+
+type nameAndAge = [string, number]
+
+const anotherUser:nameAndAge = ["Danilo", 25]
+
+console.log(anotherUser[0])
+
+anotherUser[0] = "joao"
+
+console.log(anotherUser[0])
+
+// anotherUser[1] = "texto" erro de tipagem

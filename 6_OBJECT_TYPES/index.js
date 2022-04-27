@@ -60,4 +60,13 @@ myArray = myArray.map(item => {
     return `Fruta: ${item}`;
 });
 console.log(myArray);
-// myArray[0] = "mansão" Apenas da para alterar atraves de metodos 
+// number[]
+const myNumberArray = [1, 2, 3, 4, 5];
+// const myNumberArray2: fiveNummbers = [1,2,3,4,5,6] erro de tipagem um elemento a mais do que o type
+// const miexedArray: fiveNummbers = [1,true,"teste",5] erro de tipagem
+console.log(myNumberArray);
+const anotherUser = ["Danilo", 25];
+console.log(anotherUser[0]);
+anotherUser[0] = "joao";
+console.log(anotherUser[0]);
+// anotherUser[1] = "texto" erro de tipagem
