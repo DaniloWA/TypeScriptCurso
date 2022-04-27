@@ -70,3 +70,10 @@ console.log(anotherUser[0]);
 anotherUser[0] = "joao";
 console.log(anotherUser[0]);
 // anotherUser[1] = "texto" erro de tipagem
+// 9 - Tuplas com readonly
+function showNumbers(numbers) {
+    // numbers[0] = 10 apenas leitura!
+    console.log(numbers[0]);
+    console.log(numbers[1]);
+}
+showNumbers([1, 4]);
