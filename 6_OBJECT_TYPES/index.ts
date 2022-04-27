@@ -93,3 +93,23 @@ const daniloDev: Superhuman={
 
 console.log(danilo)
 console.log(daniloDev)
+
+// 6  - Intersection types
+interface Character {
+    name: string
+}
+
+interface Gun {
+    type: string,
+    caliber: number
+}
+
+type HumanWithGun = Character & Gun
+
+const arnold: HumanWithGun = {
+    name:"arnold",
+    type: "shotgun",
+    caliber: 12
+}
+
+console.log(arnold)

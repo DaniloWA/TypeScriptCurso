@@ -43,3 +43,9 @@ const daniloDev = {
 };
 console.log(danilo);
 console.log(daniloDev);
+const arnold = {
+    name: "arnold",
+    type: "shotgun",
+    caliber: 12
+};
+console.log(arnold);
