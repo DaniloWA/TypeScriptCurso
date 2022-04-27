@@ -54,3 +54,18 @@ const fusca:Car = {
 console.log(fusca)
 
 // fusca.wheels = 5 Apenas leitura readonly
+
+// 4  - index sgnature
+interface CoordObject {
+    [index: string]: number
+}
+
+let coords: CoordObject = {
+    x: 10
+}
+
+coords.y = 15
+
+console.log(coords)
+
+// coords.z = "teste" erro de tipagem 

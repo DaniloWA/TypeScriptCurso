@@ -27,4 +27,9 @@ const fusca = {
     wheels: 4
 };
 console.log(fusca);
-// fusca.wheels = 5 Apenas leitura readonly
+let coords = {
+    x: 10
+};
+coords.y = 15;
+console.log(coords);
+// coords.z = "teste" erro de tipagem 
