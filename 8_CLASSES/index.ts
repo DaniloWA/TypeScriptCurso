@@ -317,3 +317,132 @@ class TestingPrivate extends PrivateClass{
 }
 
 
+
+// 14 - static members
+// Faz com que o acesso ou a utilização não dependam de objetos, Podemos utilizalos a partir da própria classe 
+
+class StaticMembers {
+    static prop = "Teste static"
+
+    static staticMethod(){
+        console.log("Este é um método estático")
+    }
+}
+
+// console.log(StaticMembers.prop) sem o static ela não é acessível fora do objeto 
+StaticMembers.prop
+
+
+// 15 - generic class
+class Item<T, U>{
+    first
+    second
+
+    constructor(first: T, second:U){
+        this.first = first
+        this.second = second
+    }
+
+    get showFirst() {
+        return `O first é: ${this.first}`
+    }
+}
+
+const newItem = new Item("Caixa", "Surpresa")
+
+console.log(newItem)
+console.log(newItem.showFirst)
+console.log(typeof newItem.first)
+
+const secondItem = new Item(12, true)
+
+console.log(secondItem)
+console.log(secondItem.showFirst)
+console.log(typeof secondItem.first)
+
+
+// 16 - Parameters properties
+// É um recurso para definir a privacidade , nome e tipo das propriedades no constructor
+
+class ParametersProperties {
+    constructor(public name: string, private qty: number, private price: number){
+        this.name = name
+        this.qty = qty
+        this.price = price 
+    }
+
+    get showQty(){
+        return `Qty total: ${this.qty}`
+    }
+    get showPrice(){
+        return `Qty total: ${this.price}`
+    }
+}
+
+const newShirt = new ParametersProperties("Camisa", 5, 19.00)
+
+console.log(newShirt.name)
+//console.log(newShirt.price) da erro porque price é privado.
+
+console.log(newShirt.showPrice)
+console.log(newShirt.showQty)
+
+
+// 17 - class expressions
+// É um recurso para criar uma classe anônima, encapsular a classe em uma variavel
+
+const myClass = class<T> {
+    name
+    
+    constructor(name: T){
+        this.name = name
+    }
+}
+
+const pessoa = new myClass("jONES")
+
+console.log(pessoa)
+
+console.log(pessoa.name)
+
+
+// 18 - Abstract class
+// é um recurso para servir como model de outra classe! Todos os métodos dela devem ser impementados nas classes que a herdam. um Molde de classes!
+
+abstract class AbstractClass {
+    abstract showName(): void
+}
+
+//const newObj = new AbstractClass(); não é possivel criar instancias de uma classe abstrata apenas extender 
+
+class AbstractExample extends AbstractClass {
+    name:string
+
+    constructor(name: string){
+        super() // Super porque ela faz um herança é obrigatorio
+        this.name = name
+    }
+
+    showName(): void { // é obrigado a criar os mesmos metodos da classe abstract
+        console.log(`O nome é ${this.name}`)
+    }
+}
+
+const newAbstractObject = new AbstractExample("Josias")
+
+newAbstractObject.showName()
+
+// 19 - Relações entre classes
+
+class Dog {
+    name!: string // o ! define a propiedade como opicional! 
+}
+
+class Cat {
+    name!: string // o ! define a propiedade como opicional! 
+}
+
+
+const doguinho: Dog = new Cat() // não reclama porque valida as partes internas não o nome da identidade mas não é costume. e nem boa pratica
+
+console.log(doguinho) // fica com a instancia de Cat apesar de ter sido tipado como Dog.
