@@ -217,7 +217,7 @@ class Base {
         console.log("Alguma coisa")
     }
     showName(){
-        
+
     }
 }
 
@@ -230,3 +230,90 @@ class Nova extends Base {
 const myObject = new Nova()
 
 myObject.someMethod()
+
+// 11 - public é o padrão default! ja vem publico!
+
+class C {
+   public x: number = 10
+}
+
+class D extends C {
+
+}
+
+
+const cInstance = new C()
+
+console.log(cInstance.x)
+
+const dInstance = new D()
+
+console.log(dInstance.x)
+
+// 12 - protected
+// pode ser utilizado apenas em subclasses. Uma propriedade só pode ser acessada por um método
+
+class E {
+    protected x: number = 10
+
+    protected protectedMethod() {
+        console.log("Esse metodo é protegido!")
+    }
+}
+
+class F extends E {
+    showX(){
+        console.log("X: " + this.x)
+    }
+
+    showProtectedMethodo(){
+        this.protectedMethod()
+    }
+}
+
+const fInstance = new F()
+
+fInstance.showX()
+// console.log(fInstance.x) no metodo protect apenas da pra acessar propriedades por metodos 
+
+
+// fInstance.protectedMethod() como as propiedads os metodos tambem só podem ser acessado por metodos.
+fInstance.showProtectedMethodo()
+
+
+// 13 - private propiedades e objetos ´so podem ser acessados na classe que os definiu! e ainda precisam de metodos para serem acessados!
+
+class PrivateClass {
+    private name = "Private"
+
+    showName(){
+        return this.name
+    }
+
+    private privateMethod() {
+        console.log("Método privado!")
+    }
+
+    showPrivateMethod(){
+        return this.privateMethod()
+    }
+}
+
+const pObj = new PrivateClass()
+
+//console.log(pObj.name) privado apenas da pra acessar com metodos da propria classe!
+
+console.log(pObj.showName())
+
+//console.log(pObj.privateMethod()) privado apenas da pra acessar com metodos da propria classe!
+
+console.log(pObj.showPrivateMethod())
+
+
+class TestingPrivate extends PrivateClass{
+    MyMethod() {
+        // this.privateMethod()  só pode acessar com a propria classe que criou 
+    }
+}
+
+
